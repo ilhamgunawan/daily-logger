@@ -82,7 +82,11 @@ Contributing
 
 License
 -------
-No license file found in this repository. If one exists, consult [LICENSE](/Users/ilham/Projects/daily-logger/LICENSE). Otherwise contact the repository owner for licensing details.
+Code: GNU General Public License v3.0 or later (GPL-3.0-or-later). See [LICENSE](/Users/ilham/Projects/daily-logger/LICENSE).
+
+Content (logs, docs, examples): Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0). See [LICENSE-CONTENT](/Users/ilham/Projects/daily-logger/LICENSE-CONTENT).
+
+Note: Personal or private log entries in `logs/` may include sensitive information — verify the intended distribution before publishing or reusing content from that directory.
 
 Contact
 -------
