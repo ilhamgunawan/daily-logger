@@ -5,18 +5,28 @@ Convention-driven daily activity logger — a small repository of rules and work
 This repository is primarily authored for an automated agent to operate against the files using the rules in `docs/`. The agent that typically interacts with this repo is an AI assistant using the Copilot CLI runtime in VS Code.
 
 Table of Contents
-- About
-- Repo layout
-- Workflows
-- Critical rules
-- How to use (manual steps)
-- Examples
-- Contributing
-- License
+- [About](#about)
+- [How to use](#how-to-use)
+- [Repo layout](#repo-layout)
+- [Workflows](#workflows)
+- [Critical rules](#critical-rules)
+- [How to use (manual steps)](#how-to-use-manual-steps)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
 
 About
 -----
 Daily Logger stores daily notes as markdown files following a small set of content and enhancement rules. The repo separates raw draft entries from final entries and provides rules for summarization. The authoritative specification for formats and enhancement rules lives in the `docs/` folder — read those before creating or modifying log files.
+
+How to use
+----------
+Since your logs may contain personal or private information, run your own private copy rather than committing directly to this repo:
+
+1. Fork this repo.
+2. Set the forked repo to **private** — this prevents personal information in your logs from being publicly leaked.
+3. Clone your forked repo to your local machine.
+4. Start using it: drop raw notes into `logs/<year>/<month>/drafts/draft_YYYY-MM-DD.md` and let your agent (or you, manually) enhance and summarize them following the rules in `docs/` and `AGENTS.md`.
 
 Repo layout
 -----------
