@@ -37,6 +37,31 @@ this file.
 3. **Push to GitHub**: only when explicitly requested by the human; never
    commit or push on your own initiative.
 
+## Skills
+
+This repo ships Claude Code project skills under `.claude/skills/` that
+implement the core workflows directly — prefer invoking these over
+re-deriving the steps manually:
+
+- `enhance-draft` — converts a selected draft into its final daily entry
+  (Enhance draft workflow).
+- `summarize-week` — generates a weekly summary for a given ISO week.
+- `summarize-month` — generates a monthly summary for a given month.
+- `summarize-year` — generates an annual summary for a given year.
+
+Each skill's `SKILL.md` embeds the relevant rules from `docs/` (existing-file
+checks, source-of-truth constraints, output structure) so following the
+skill satisfies the critical rules below.
+
+Equivalent implementations exist for other runtimes, all defining the same
+four workflows — keep them in sync when a workflow's rules change:
+
+- opencode commands: `.opencode/command/<name>.md`, invoked as
+  `/<name> [args]`.
+- GitHub Copilot CLI custom agents: `.github/agents/<name>.agent.md`,
+  invoked via `/agent`, "use the `<name>` agent", or
+  `copilot --agent <name> --prompt "..."`.
+
 ## Critical rules (apply across all workflows)
 
 - **Never fabricate.** Every fact, number, or claim in a final entry or
