@@ -25,6 +25,27 @@ following the rules in `docs/` — there is no code, no build, no tests.
 3. **Push to GitHub** (asked explicitly): commit and push; never commit on
    your own.
 
+## Skills / commands / agents
+
+The workflows above are implemented as ready-to-invoke prompts for every
+supported agent runtime — use them instead of re-deriving the steps
+manually:
+
+- Claude Code skills: `.claude/skills/<name>/SKILL.md`, invoked as
+  `/<name>` or triggered by intent.
+- opencode commands: `.opencode/command/<name>.md`, invoked as `/<name>
+  [args]`.
+- GitHub Copilot CLI custom agents: `.github/agents/<name>.agent.md`,
+  invoked via `/agent`, "use the `<name>` agent", or
+  `copilot --agent <name> --prompt "..."`.
+
+All three define the same four workflows, kept in sync:
+
+- `enhance-draft` — draft → final daily entry
+- `summarize-week` — final entries → weekly summary
+- `summarize-month` — final entries → monthly summary
+- `summarize-year` — final entries → annual summary
+
 ## Critical rules
 
 - Never invent facts; mark gaps `(needs detail)` (see enhancement rules).
